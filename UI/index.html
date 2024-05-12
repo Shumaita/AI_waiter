@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./bootstrap-5.0.2-dist/css/bootstrap.min.css"
+    />
+    <title>AI Waiter</title>
+    <style>
+      .chessboard {
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-rows: repeat(9, 1fr);
+        width: 630px;
+        height: 594px;
+        margin: 0 auto;
+      }
+
+      .square {
+        width: 70px;
+        height: 66px;
+      }
+
+      .black {
+        background-color: #b58863;
+      }
+
+      .white {
+        background-color: #f0d9b5;
+      }
+      .wall {
+        background-color: rgb(19, 14, 14);
+      }
+      .kitchen {
+        background-image: url("./kitchen.png");
+        background-size: cover;
+      }
+      .food {
+        background-image: url("./table.png");
+        background-size: cover;
+      }
+      .active-waiter {
+        background: url("./robot.png");
+        background-size: cover;
+      }
+      .selectBadge {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <!-- Headers Section -->
+      <header class="d-flex justify-content-center py-3 bg-dark text-white">
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a href="#hero" class="nav-link" aria-current="page">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#feature" class="nav-link">AI Waiter</a>
+          </li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+        </ul>
+      </header>
+
+      <!-- Hero Section -->
+      <section class="px-4 py-5 my-5 text-center" id="hero">
+        <img
+          class="d-block mx-auto mb-4"
+          src="./robot.png"
+          alt=""
+          width="100"
+          height="100"
+        />
+        <h1 class="display-5 fw-bold">Introducing the Future of Hospitality</h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4">
+            Meet our AI-powered waiter, revolutionizing the dining experience
+            with personalized service and unparalleled efficiency. Our AI waiter
+            can take orders, provide recommendations, answer questions, and even
+            engage in friendly conversation, all while ensuring accurate and
+            prompt service. With its advanced natural language processing
+            capabilities, it can understand and communicate in multiple
+            languages, catering to a diverse clientele.
+          </p>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section class="px-4 py-3 text-center" id="feature">
+        <h1 class="display-5 fw-bold">AI Waiter</h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4">
+            Interact with the AI waiter by selecting table and order options.
+          </p>
+        </div>
+      </section>
+      <div class="container">
+        <div class="chessboard"></div>
+        <button
+          type="button"
+          class="btn btn-primary mx-auto d-block my-2"
+          onclick="submitOrder()"
+        >
+          Submit
+        </button>
+      </div>
+
+      <!-- About Section -->
+      <section class="py-3 py-md-5 py-xl-8" id="about">
+        <h1 class="display-5 py-3 fw-bold text-center">About Us</h1>
+        <div class="container">
+          <div class="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
+            <div class="col-12 col-lg-6 col-xl-5">
+              <img
+                class="img-fluid rounded"
+                loading="lazy"
+                src="./pic.png"
+                alt="Emon"
+                width="500"
+                height="500"
+              />
+            </div>
+            <div class="col-12 col-lg-6 col-xl-7">
+              <div class="row justify-content-xl-center">
+                <div class="col-12 col-xl-11">
+                  <h2 class="h1 mb-3">Group-6</h2>
+                  <p class="lead fs-4 text-secondary mb-3">
+                    We are the group-06. Team members of group-6 are Ummeh Habiba Tahia(C213218),
+                    Umma Maharunnasa Mim(C213224),Shumaita Binte Burhan(C213225).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer
+        class="d-flex justify-content-center py-3 mt-3 bg-dark text-white"
+      >
+        <p>Copyright ©2024 AI Waiter | All rights reserved</p>
+      </footer>
+    </main>
+    <script src="./bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
